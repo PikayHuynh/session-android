@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ActivityBT3">
+
+    <ImageView
+        android:id="@+id/img_logo_bt3"
+        android:layout_width="177dp"
+        android:layout_height="294dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="117dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/giphy" />
+
+    <TextView
+        android:id="@+id/tv_title_bt3"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="115dp"
+        android:gravity="center"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_bt3" />
+
+    <TextView
+        android:id="@+id/tv_count_bt3"
+        android:layout_width="61dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="175dp"
+        android:gravity="center"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_bt3" />
+
+    <Button
+        android:id="@+id/btn_add_bt3"
+        android:layout_width="133dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="139dp"
+        android:textSize="18dp"
+        android:contentDescription="Tăng lên 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_count_bt3" />
+
+    <Button
+        android:id="@+id/btn_sub_bt3"
+        android:layout_width="133dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="139dp"
+        android:textSize="18dp"
+        android:contentDescription="Giảm xuống 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_bt3" />
+
+    <Button
+        android:id="@+id/btn_exit_bt3"
+        android:layout_width="133dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="139dp"
+        android:textSize="18dp"
+        android:contentDescription="Thoát khỏi trang bài tập 3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sub_bt3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

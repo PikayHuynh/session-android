@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ActivityBT12">
+
+    <ImageView
+        android:id="@+id/img_logo_bt12"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="114dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/outline_ads_click_24" />
+
+    <Button
+        android:id="@+id/btn_exit_bt12"
+        android:layout_width="130dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="148dp"
+        android:contentDescription="Thoát khỏi trang bài tập 12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reply_bt12" />
+
+    <TextView
+        android:id="@+id/tv_result_bt12"
+        android:layout_width="124dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="152dp"
+        android:gravity="center"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_bt12" />
+
+    <TextView
+        android:id="@+id/tv_reply_bt12"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="14dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressbar_bt12" />
+
+    <ProgressBar
+        android:id="@+id/progressbar_bt12"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result_bt12" />
+</androidx.constraintlayout.widget.ConstraintLayout>

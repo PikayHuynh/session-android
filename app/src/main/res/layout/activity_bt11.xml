@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ActivityBT11">
+
+    <SeekBar
+        android:id="@+id/seekbar_bt11"
+        android:layout_width="385dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_seekbar_bt11" />
+
+    <ImageView
+        android:id="@+id/img_logo_bt11"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="138dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/outline_android_cell_4_bar_24" />
+
+    <Button
+        android:id="@+id/btn_exit_bt11"
+        android:layout_width="134dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="146dp"
+        android:contentDescription="Thoát khỏi trang bài tập 11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reply_bt11" />
+
+    <TextView
+        android:id="@+id/tv_seekbar_bt11"
+        android:layout_width="189dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="119dp"
+        android:gravity="center"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_bt11" />
+
+    <TextView
+        android:id="@+id/tv_reply_bt11"
+        android:layout_width="381dp"
+        android:layout_height="189dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="22dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar_bt11" />
+</androidx.constraintlayout.widget.ConstraintLayout>

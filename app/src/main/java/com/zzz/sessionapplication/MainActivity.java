@@ -14,6 +14,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import com.bumptech.glide.Glide;
 import com.zzz.sessionapplication.activity.ActivityBT1;
+import com.zzz.sessionapplication.activity.ActivityBT10;
+import com.zzz.sessionapplication.activity.ActivityBT11;
+import com.zzz.sessionapplication.activity.ActivityBT12;
 import com.zzz.sessionapplication.activity.ActivityBT2;
 import com.zzz.sessionapplication.activity.ActivityBT3;
 import com.zzz.sessionapplication.activity.ActivityBT4;
@@ -21,28 +24,25 @@ import com.zzz.sessionapplication.activity.ActivityBT5;
 import com.zzz.sessionapplication.activity.ActivityBT6;
 import com.zzz.sessionapplication.activity.ActivityBT7;
 import com.zzz.sessionapplication.activity.ActivityBT8;
+import com.zzz.sessionapplication.activity.ActivityBT9;
 import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
   private static final Map<Integer, Class<? extends AppCompatActivity>> ACTIVITY_PAGE =
-      Map.of(
-          1,
-          ActivityBT1.class,
-          2,
-          ActivityBT2.class,
-          3,
-          ActivityBT3.class,
-          4,
-          ActivityBT4.class,
-          5,
-          ActivityBT5.class,
-          6,
-          ActivityBT6.class,
-          7,
-          ActivityBT7.class,
-          8,
-          ActivityBT8.class);
+      Map.ofEntries(
+          Map.entry(1, ActivityBT1.class),
+          Map.entry(2, ActivityBT2.class),
+          Map.entry(3, ActivityBT3.class),
+          Map.entry(4, ActivityBT4.class),
+          Map.entry(5, ActivityBT5.class),
+          Map.entry(6, ActivityBT6.class),
+          Map.entry(7, ActivityBT7.class),
+          Map.entry(8, ActivityBT8.class),
+          Map.entry(9, ActivityBT9.class),
+          Map.entry(10, ActivityBT10.class),
+          Map.entry(11, ActivityBT11.class),
+          Map.entry(12, ActivityBT12.class));
   private Spinner spinnerSelectExercise;
 
   @Override

@@ -17,6 +17,13 @@ import com.zzz.sessionapplication.activity.ActivityBT1;
 import com.zzz.sessionapplication.activity.ActivityBT10;
 import com.zzz.sessionapplication.activity.ActivityBT11;
 import com.zzz.sessionapplication.activity.ActivityBT12;
+import com.zzz.sessionapplication.activity.ActivityBT13;
+import com.zzz.sessionapplication.activity.ActivityBT14;
+import com.zzz.sessionapplication.activity.ActivityBT15;
+import com.zzz.sessionapplication.activity.ActivityBT16;
+import com.zzz.sessionapplication.activity.ActivityBT17;
+import com.zzz.sessionapplication.activity.ActivityBT18;
+import com.zzz.sessionapplication.activity.ActivityBT19;
 import com.zzz.sessionapplication.activity.ActivityBT2;
 import com.zzz.sessionapplication.activity.ActivityBT3;
 import com.zzz.sessionapplication.activity.ActivityBT4;
@@ -42,7 +49,14 @@ public class MainActivity extends AppCompatActivity {
           Map.entry(9, ActivityBT9.class),
           Map.entry(10, ActivityBT10.class),
           Map.entry(11, ActivityBT11.class),
-          Map.entry(12, ActivityBT12.class));
+          Map.entry(12, ActivityBT12.class),
+          Map.entry(13, ActivityBT13.class),
+          Map.entry(14, ActivityBT14.class),
+          Map.entry(15, ActivityBT15.class),
+          Map.entry(16, ActivityBT16.class),
+          Map.entry(17, ActivityBT17.class),
+          Map.entry(18, ActivityBT18.class),
+          Map.entry(19, ActivityBT19.class));
   private Spinner spinnerSelectExercise;
 
   @Override

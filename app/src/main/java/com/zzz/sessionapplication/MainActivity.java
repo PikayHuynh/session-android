@@ -25,6 +25,7 @@ import com.zzz.sessionapplication.activity.ActivityBT17;
 import com.zzz.sessionapplication.activity.ActivityBT18;
 import com.zzz.sessionapplication.activity.ActivityBT19;
 import com.zzz.sessionapplication.activity.ActivityBT2;
+import com.zzz.sessionapplication.activity.ActivityBT20;
 import com.zzz.sessionapplication.activity.ActivityBT3;
 import com.zzz.sessionapplication.activity.ActivityBT4;
 import com.zzz.sessionapplication.activity.ActivityBT5;
@@ -56,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
           Map.entry(16, ActivityBT16.class),
           Map.entry(17, ActivityBT17.class),
           Map.entry(18, ActivityBT18.class),
-          Map.entry(19, ActivityBT19.class));
+          Map.entry(19, ActivityBT19.class),
+          Map.entry(20, ActivityBT20.class));
   private Spinner spinnerSelectExercise;
 
   @Override
@@ -100,7 +102,8 @@ public class MainActivity extends AppCompatActivity {
             "Bài 16",
             "Bài 17",
             "Bài 18",
-            "Bài 19");
+            "Bài 19",
+            "Bài 20");
 
     ArrayAdapter<String> adapter =
         new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, exercises);
@@ -125,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void switchPage(int page) {
-    if (page <= 0 || page > 19) return;
+    if (page <= 0 || page > 20) return;
     Intent intent = new Intent(this, ACTIVITY_PAGE.get(page));
     startActivity(intent);
   }

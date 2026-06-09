@@ -7,4 +7,65 @@
     android:layout_height="match_parent"
     tools:context=".activity.ActivityBT19">
 
+    <ImageView
+        android:id="@+id/img_logo_bt19"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="138dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_calendar_today_24" />
+
+    <TextView
+        android:id="@+id/tv_result_bt19"
+        android:layout_width="221dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="103dp"
+        android:gravity="center"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_choose_date_bt19" />
+
+    <Button
+        android:id="@+id/btn_exit_bt19"
+        android:layout_width="166dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="130dp"
+        android:contentDescription="Chọn kiểu thời gian"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_bt19" />
+
+    <Button
+        android:id="@+id/btn_choose_date_bt19"
+        android:layout_width="166dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="130dp"
+        android:contentDescription="Thoát trang bài tập 19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_exit_bt19" />
+
+    <CalendarView
+        android:id="@+id/cv_bt19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result_bt19" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

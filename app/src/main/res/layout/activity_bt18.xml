@@ -7,4 +7,85 @@
     android:layout_height="match_parent"
     tools:context=".activity.ActivityBT18">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_bt18"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Spinner
+            android:id="@+id/toolbar_spinner_bt18"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/img_logo_bt18"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="146dp"
+        android:layout_marginEnd="275dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_bt18"
+        app:srcCompat="@drawable/outline_dashboard_customize_24" />
+
+    <TextView
+        android:id="@+id/tv_context_bt18"
+        android:layout_width="213dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="171dp"
+        android:layout_marginEnd="39dp"
+        android:text="Context menu"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="20dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_logo_bt18"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_bt18" />
+
+    <ListView
+        android:id="@+id/lv_language"
+        android:layout_width="412dp"
+        android:layout_height="274dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_bt18" />
+
+    <ImageView
+        android:id="@+id/img_logo_popup_bt18"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="164dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lv_language"
+        app:srcCompat="@drawable/outline_mark_chat_unread_24" />
+
+    <Button
+        android:id="@+id/btn_exit_bt18"
+        android:layout_width="124dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="152dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_popup_bt18" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

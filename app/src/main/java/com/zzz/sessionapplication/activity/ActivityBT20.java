@@ -63,8 +63,7 @@ public class ActivityBT20 extends AppCompatActivity {
                   },
                   hour,
                   minute,
-                  true // true = 24h, false = 12h
-                  );
+                  true); // true = 24h, false = 12h
           dialog.show();
         });
 

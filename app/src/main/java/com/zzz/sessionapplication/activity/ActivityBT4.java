@@ -13,6 +13,8 @@ import com.zzz.sessionapplication.R;
 import com.zzz.sessionapplication.constant.Constant;
 
 public class ActivityBT4 extends AppCompatActivity {
+  private static final String ON = "On";
+  private static final String OFF = "Off";
   private ImageView imgLogo;
   private Button btnExit;
   private Button btnToggle;
@@ -38,15 +40,16 @@ public class ActivityBT4 extends AppCompatActivity {
     btnExit = findViewById(R.id.btn_exit_bt4);
     btnToggle = findViewById(R.id.btn_toggle_bt4);
     btnExit.setText(Constant.EXIT);
-    btnToggle.setText("On");
+    btnToggle.setText(ON);
   }
 
   private void act() {
     btnExit.setOnClickListener(v -> finish());
     btnToggle.setOnClickListener(
         v -> {
-          btnToggle.setText(btnToggle.getText().equals("On") ? "Off" : "On");
-          imgLogo.setVisibility(btnToggle.getText().equals("On") ? View.VISIBLE : View.INVISIBLE);
+          // equals so sánh bằng return đúng(true)/sai(false)
+          btnToggle.setText(btnToggle.getText().equals(ON) ? OFF : ON);
+          imgLogo.setVisibility(btnToggle.getText().equals(ON) ? View.VISIBLE : View.INVISIBLE);
         });
   }
 }

@@ -16,7 +16,7 @@ import com.zzz.sessionapplication.constant.Constant;
 import java.util.function.BiFunction;
 
 public class ActivityBT6 extends AppCompatActivity {
-  private static final String SPELL = "Đánh vần";
+  private static final String SPELL = "Đánh vần"; // Đánh  vầN
   private static final String PUZZLE = "Xếp hình";
   private Button btnExit;
   private Button btnSubmit;
@@ -41,12 +41,12 @@ public class ActivityBT6 extends AppCompatActivity {
 
   private void init() {
     ImageView imgLogo = findViewById(R.id.img_logo_bt6);
-    Glide.with(this).load(R.drawable.kim).circleCrop().into(imgLogo);
+    Glide.with(this).load(R.drawable.java).circleCrop().into(imgLogo);
     checkBoxPuzzle = findViewById(R.id.checkbox_1_bt6);
-    checkBoxPuzzle.setText("Xếp hình");
+    checkBoxPuzzle.setText(PUZZLE);
     checkBoxPuzzle.setChecked(false);
     checkBoxSpell = findViewById(R.id.checkbox_2_bt6);
-    checkBoxSpell.setText("Đánh vần");
+    checkBoxSpell.setText(SPELL);
     checkBoxSpell.setChecked(false);
     btnExit = findViewById(R.id.btn_exit_bt6);
     btnExit.setText(Constant.EXIT);
@@ -56,15 +56,17 @@ public class ActivityBT6 extends AppCompatActivity {
 
   private void act() {
     btnExit.setOnClickListener(v -> finish());
+
     BiFunction<String, Boolean, String> message =
         (value, isChecked) ->
-            isChecked
+            isChecked == true
                 ? String.format("Bạn chọn '%s'.", value)
                 : String.format("Bạn không chọn '%s'.", value);
 
     checkBoxPuzzle.setOnCheckedChangeListener(
         (v, isChecked) ->
             Toast.makeText(this, message.apply(PUZZLE, isChecked), Toast.LENGTH_SHORT).show());
+
     checkBoxSpell.setOnCheckedChangeListener(
         (v, isChecked) ->
             Toast.makeText(this, message.apply(SPELL, isChecked), Toast.LENGTH_SHORT).show());
@@ -73,12 +75,13 @@ public class ActivityBT6 extends AppCompatActivity {
         v -> {
           if (!checkBoxPuzzle.isChecked() && !checkBoxSpell.isChecked()) {
             Toast.makeText(this, "Bạn không chọn gì hết.", Toast.LENGTH_SHORT).show();
+          } else {
+            String result =
+                message.apply(PUZZLE, checkBoxPuzzle.isChecked())
+                    + ", "
+                    + message.apply(SPELL, checkBoxSpell.isChecked());
+            Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
           }
-          String result =
-              message.apply(PUZZLE, checkBoxPuzzle.isChecked())
-                  + ", "
-                  + message.apply(SPELL, checkBoxSpell.isChecked());
-          Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
         });
   }
 }

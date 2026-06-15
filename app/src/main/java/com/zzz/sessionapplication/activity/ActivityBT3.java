@@ -41,7 +41,7 @@ public class ActivityBT3 extends AppCompatActivity {
 
   private void init() {
     ImageView imgLogoGif = findViewById(R.id.img_logo_bt3);
-    Glide.with(this).asGif().load(R.drawable.giphy).into(imgLogoGif);
+    Glide.with(this).asGif().load(R.drawable.gif_banner_new).into(imgLogoGif);
     TextView tvTitle = findViewById(R.id.tv_title_bt3);
     tvTitle.setText("Hãy click em đi anh.");
     tvCount = findViewById(R.id.tv_count_bt3);
@@ -55,8 +55,8 @@ public class ActivityBT3 extends AppCompatActivity {
 
   private void act() {
     btnExit.setOnClickListener(v -> finish());
-    btnAdd.setOnClickListener(v -> handleClick(btnAdd));
-    btnSub.setOnClickListener(v -> handleClick(btnSub));
+    btnAdd.setOnClickListener(v -> handleClick(btnAdd)); // lambda -> {}
+    btnSub.setOnClickListener(v -> handleClick(btnSub)); // lambda -> {}
   }
 
   private void handleClick(Button btn) {
@@ -64,16 +64,20 @@ public class ActivityBT3 extends AppCompatActivity {
     if (StringUtil.isInvalid(tvCount.getText().toString())) {
       tvCount.setText("0");
     }
-    if (value.equals(SUB)) {
-      if (tvCount.getText().toString().equals("0")) {
+
+    if (value.equals(SUB)) { // Trừ
+      if (tvCount.getText().toString().equals("0")) { // Rơi vào 0
         Toast.makeText(
                 this, "Không được số âm nhé anh yêu <3 chỉ muốn là số dương.", Toast.LENGTH_SHORT)
             .show();
         return;
       }
-      tvCount.setText(StringUtil.cast(Long.parseLong(tvCount.getText().toString()) - 1));
-    } else {
-      tvCount.setText(StringUtil.cast(Long.parseLong(tvCount.getText().toString()) + 1));
+      long num = Long.parseLong(tvCount.getText().toString()); // Chuyển đổi số nguyên
+      // Hợp lệ lớn hơn > 0
+      tvCount.setText(StringUtil.cast(num - 1));
+    } else { // Cộng
+      long num = Long.parseLong(tvCount.getText().toString()); // Chuyển đổi số nguyên
+      tvCount.setText(StringUtil.cast(num + 1));
     }
   }
 }

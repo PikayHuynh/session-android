@@ -38,22 +38,22 @@ public class ActivityBT5 extends AppCompatActivity {
 
   private void init() {
     imgLogo = findViewById(R.id.img_logo_bt5);
-    Glide.with(this).load(R.drawable.girl_asian_1).circleCrop().into(imgLogo);
+    Glide.with(this).load(R.drawable.java).circleCrop().into(imgLogo);
     btnExit = findViewById(R.id.btn_exit_bt5);
     swToggle = findViewById(R.id.sw_toggle_bt5);
     btnExit.setText(Constant.EXIT);
-    swToggle.setText("Show");
-    swToggle.setChecked(true);
+    swToggle.setText("Show"); // set default text
+    swToggle.setChecked(true); // set default checked = true
   }
 
   private void act() {
     btnExit.setOnClickListener(v -> finish());
     swToggle.setOnCheckedChangeListener(
         (v, isChecked) -> {
-          if (isChecked) {
+          if (isChecked) { // true
             Toast.makeText(this, "Show", Toast.LENGTH_SHORT).show();
             imgLogo.setVisibility(View.VISIBLE);
-          } else {
+          } else { // false
             Toast.makeText(this, "Hide", Toast.LENGTH_SHORT).show();
             imgLogo.setVisibility(View.INVISIBLE);
           }

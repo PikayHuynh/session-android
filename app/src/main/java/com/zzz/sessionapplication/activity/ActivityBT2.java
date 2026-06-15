@@ -50,6 +50,8 @@ public class ActivityBT2 extends AppCompatActivity {
 
   private void act() {
     btnExit.setOnClickListener(v -> finish());
+
+    // Bắt sự kiện khi nhập từ bàn phím
     edtName.addTextChangedListener(
         new TextWatcher() {
           @Override
@@ -58,6 +60,7 @@ public class ActivityBT2 extends AppCompatActivity {
           @Override
           public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
+          // Thay cùng lúc với nhập
           @Override
           public void onTextChanged(CharSequence s, int start, int before, int count) {
             tvName.setText(s);

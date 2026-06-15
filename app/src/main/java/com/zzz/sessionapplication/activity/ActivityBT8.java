@@ -58,7 +58,7 @@ public class ActivityBT8 extends AppCompatActivity {
     Function<String, RadioButton> buildRadioButton =
         option -> {
           RadioButton radioButton = new RadioButton(this);
-          radioButton.setId(View.generateViewId());
+          radioButton.setId(View.generateViewId()); // 1, 2, 3
           radioButton.setText(option);
           return radioButton;
         };
@@ -73,7 +73,6 @@ public class ActivityBT8 extends AppCompatActivity {
     sexGroup.setOnCheckedChangeListener(
         (group, checkedId) -> {
           var id = findViewById(checkedId).getId();
-
           BiPredicate<Integer, Integer> mathId = Objects::equals;
           if (mathId.test(id, MALE.first)) {
             Toast.makeText(this, "You are Male", Toast.LENGTH_SHORT).show();
